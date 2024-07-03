@@ -11,14 +11,6 @@ stages:
       buildContext: .
       tag: ${CICD_GIT_REPO_NAME}:${CICD_GIT_COMMIT}
       pushRemote: true
-      registry: registry-vpc.cn-hangzhou.aliyuncs.com
-
-
-# - name: Deploy
-#   steps:
-#   - applyYamlConfig:
-#       path: ./Deployment.yaml
-
-notification: {}
+      registry: registry.cn-hangzhou.aliyuncs.com
 timeout: 60
 notification: {}
