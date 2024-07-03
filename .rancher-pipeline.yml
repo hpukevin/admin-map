@@ -1,0 +1,8 @@
+stages:
+- name: test
+  steps:
+  - runScriptConfig:
+      image: node:latest
+      shellScript: echo "hello"
+timeout: 60
+notification: {}
