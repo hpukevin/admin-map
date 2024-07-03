@@ -9,7 +9,7 @@ stages:
   - publishImageConfig:
       dockerfilePath: ./Dockerfile
       buildContext: .
-      tag: ${CICD_GIT_REPO_NAME}:${CICD_GIT_COMMIT}
+      tag: registry.cn-hangzhou.aliyuncs.com/hpukevin/hzqdockerhub:v1
       pushRemote: true
       registry: registry.cn-hangzhou.aliyuncs.com
 timeout: 60
