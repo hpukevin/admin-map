@@ -4,5 +4,21 @@ stages:
   - runScriptConfig:
       image: node:latest
       shellScript: echo "hello"
+- name: Publish
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./Dockerfile
+      buildContext: .
+      tag: ${CICD_GIT_REPO_NAME}:${CICD_GIT_COMMIT}
+      pushRemote: true
+      registry: registry-vpc.cn-hangzhou.aliyuncs.com
+
+
+# - name: Deploy
+#   steps:
+#   - applyYamlConfig:
+#       path: ./Deployment.yaml
+
+notification: {}
 timeout: 60
 notification: {}
